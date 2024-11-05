@@ -5,10 +5,10 @@ public class Main {
     public static void main(String[] args) {
         try(Scanner in = new Scanner(System.in)){;
 
-        // Створення масиву типу Person
+        
         Person[] people = new Person[3];
 
-        // Введення даних для студента
+        
         System.out.println("Enter Student details:");
         System.out.print("Name: ");
         String name = in.nextLine();
@@ -19,7 +19,7 @@ public class Main {
         String studentId = in.nextLine();
         people[0] = new Student(name, age, studentId);
 
-        // Введення даних для викладача
+        
         System.out.println("Enter Teacher details:");
         System.out.print("Name: ");
         name = in.nextLine();
@@ -30,7 +30,7 @@ public class Main {
         String department = in.nextLine();
         people[1] = new Teacher(name, age, department);
 
-        // Введення даних для завідувача кафедри
+       
         System.out.println("Enter Department Head details:");
         System.out.print("Name: ");
         name = in.nextLine();
@@ -43,7 +43,7 @@ public class Main {
         int yearsOfExperience = in.nextInt();
         people[2] = new DepartmentHead(name, age, department, yearsOfExperience);
 
-        // Виведення інформації про всіх осіб
+
         System.out.println("\nDetails of all persons:");
         for (Person person : people) {
             person.show();
@@ -53,7 +53,7 @@ public class Main {
 }
 
 
-    // Внутрішній клас Person
+    
     static class Person {
         protected String name;
         protected int age;
@@ -68,7 +68,7 @@ public class Main {
         }
     }
 
-    // Внутрішній клас Student
+    
     static class Student extends Person {
         private String studentId;
 
@@ -84,7 +84,7 @@ public class Main {
         }
     }
 
-    // Внутрішній клас Teacher
+    
     static class Teacher extends Person {
         private String department;
 
@@ -100,7 +100,7 @@ public class Main {
         }
     }
 
-    // Внутрішній клас DepartmentHead
+    
     static class DepartmentHead extends Teacher {
         private int yearsOfExperience;
 
